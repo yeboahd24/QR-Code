@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load qr_code %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>QR-Code</title>
+</head>
+<body>
+    <div>
+       
+        <h3>Add contact '{{ mecard_contact.name }}' to phone book</h3>
+        {% qr_for_mecard mecard=mecard_contact size='t' %}
+    </div>
+
+    <div>
+        {% qr_for_vcard vcard=vcard_contact size='t' %}
+    </div>
+</body>
+</html>
